@@ -1,8 +1,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 execute pathogen#infect()
-call pathogen#helptags()
-
 syntax on
 filetype plugin indent on
 
@@ -14,7 +12,6 @@ set backspace=indent,eol,start
 set hlsearch
 set relativenumber
 set ruler
-set nospell
 
 set tabstop=4
 

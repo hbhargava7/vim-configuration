@@ -7,3 +7,6 @@
 [submodule "bundle/lightline.vim"]
 	path = bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
+[submodule "bundle/vim-pandoc-syntax"]
+	path = bundle/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
