@@ -1,19 +1,34 @@
+"Pathogen and Runtime
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
 
-syntax enable
-set background=dark
+let g:pymode_python = 'python3'
 
-set backspace=indent,eol,start
-
+set tabstop=4
 set hlsearch
 set relativenumber
 set ruler
 
-set tabstop=4
+"Basics
+syntax on
+filetype plugin indent on
+
+"Aesthetics
+set background=dark
+set backspace=indent,eol,start
+
+"Key Remaps
+nmap <C-e> :e#<CR>
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
+nmap ; :CtrlPBuffer<CR>
+nmap \e :NERDTreeToggle<CR>
+nmap \j <C-w>b
+"nmap \x :w|bd
+
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  set t_Co=256
+endif
 
 hi vertsplit ctermfg=238 ctermbg=235
 hi LineNr ctermfg=237
@@ -40,8 +55,9 @@ let g:pandoc#modules#disabled = ["folding"]
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+let g:pandoc#command#latex_engine = "xelatex"
 
-command Render Pandoc pdf -V geometry:margin=1in --latex-engine=xelatex --variable urlcolor=cyan
+command Render Pandoc pdf -V geometry:margin=1in --variable urlcolor=cyan
 
 set guifont=Menlo\ Regular:h14
 
