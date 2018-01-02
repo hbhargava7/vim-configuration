@@ -13,6 +13,11 @@ set ruler
 syntax on
 filetype plugin indent on
 
+"Fix for set nospell with Pandoc bug
+autocmd FileType pandoc setlocal nowrap
+autocmd FileType pandoc setlocal nospell
+autocmd FileType pandoc setlocal foldcolumn=0
+
 "Aesthetics
 set background=dark
 set backspace=indent,eol,start
