@@ -1,4 +1,4 @@
-# Hersh's Vim Configuratin
+# Hersh's Vim Configuration
 I use Vim for writing code and note taking. Definitely no Vim expert, but it's definitely saved me time since switching from conventional (non-modal) text editors.
 
 ### Usage
