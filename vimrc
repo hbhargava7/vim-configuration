@@ -1,4 +1,5 @@
 "Pathogen and Runtime
+set nocp
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
